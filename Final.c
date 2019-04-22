@@ -1,33 +1,28 @@
 #include <stdio.h>
 
-char caesercypher (char ch, int r);
-char subcypher (char ch);
-char dubcypher (char ch);
+
+char caesercypher(char ch, int r);
+char subcypher(char ch);
+char dubcypher(char ch);
 
 int main()
+
 {
+    
 char message[100];
 int i = 0;
 int cs = 0;
 int ed = 0;
 int r = 0;
     
-printf("Choose Cypher Style\n1 - Caeser\nor\n2 - Substitution?");
-
+printf("Choose Cypher Style \n1 - Caeser\nor\n2 - Substitution? ");
 scanf("%d", &cs);
-
-printf("Do you wish to:\n1 - Encrypt\nor\n2 - Decrypt?\n");
-
+printf("Do you wish to:\n1 - Encrypt\nor\n2 - Decrypt? ");
 scanf("%d", &ed);
-    
-if(cs == 1)
-{
-    printf ("Enter Rotation Variable: \n");
-    scanf ("%d", &r);
-};
-    
-printf ("Enter Message:");
-fgets (message, 100, stdin);
+printf ("Enter Rotation Variable: ");
+scanf ("%d", &r);
+printf ("Enter Message: ");
+scanf("%s", message);
     
 if (cs == 1)
 {
@@ -145,4 +140,5 @@ char dubcypher (char ch)
         };
     }
     return ch;
+    
 }
