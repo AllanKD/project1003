@@ -1,11 +1,11 @@
 #include <stdio.h>
 
 
-char caesercypher(char ch, int r);
-char subcypher(char ch);
-char dubcypher(char ch);
+char caesercypher (char ch, int r);
+char subcypher (char ch);
+char dubcypher (char ch);
 
-int main()
+int main(void)
 
 {
     
@@ -38,7 +38,8 @@ if (cs == 1)
     {
         for (i = 0; message[i] != '\0'; ++i)
         {
-            message[i] = caesercypher (message[i], -r);
+            r = -1*r;
+            message[i] = caesercypher (message[i], r);
         }
         printf ("Decrypted Msg is: %s", message);
     }
