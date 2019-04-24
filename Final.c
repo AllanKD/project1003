@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-
 char caesercypher (char ch, int r);
 char subcypher (char ch);
 char dubcypher (char ch);
 
-int main(void)
+main(void)
 
 {
     
